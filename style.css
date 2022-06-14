@@ -1,0 +1,12 @@
+body {
+    background-color: beige;
+}
+
+.container {
+    background-color: antiquewhite;
+}
+
+.clock {
+    background-color: aqua;
+    width: 100px;
+}
