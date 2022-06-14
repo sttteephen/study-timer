@@ -1,28 +1,40 @@
-let counting = false;
+function CountDown() {
 
-function incrementClock() {
-    if (counting) {
-        currentTime = document.getElementById("time").innerHTML;
-        let seconds = parseInt(currentTime.slice(3));
-        seconds++;
-        newSeconds = String(seconds).padStart(2, "0");
-        document.getElementById("time").innerHTML = "00:" + newSeconds
+    this.counting = false;
+    this.initialSeconds = 10 * 60;
+    this.currentSeconds = this.initialSeconds;
+
+    this.decrementClock = function () {
+        //console.log("decrement clock " + this.counting)
+        if (this.counting) {
+            this.currentSeconds--;
+            this.updateScreen();
+        }
+    }
+
+    this.startClock = function () {
+        //console.log("start clock")
+        this.counting = true;
+    }
+
+    this.pauseClock = function () {
+        //console.log("pause clock")
+        this.counting = false;
+    }
+
+    this.resetClock = function () {
+        //console.log("reset clock")
+        this.counting = false;
+        this.currentSeconds = this.initialSeconds;
+        this.updateScreen();
+    }
+
+    this.updateScreen = function () {
+        //console.log("updating screen")
+        document.getElementById("time").innerHTML = "00:" + this.currentSeconds;
     }
 }
 
-function startTimer() {
-    console.log("start clock")
-    counting = true
-}
-
-function stopTimer() {
-    console.log("stop clock")
-    counting = false
-}
-
-function resetTimer() {
-    console.log("reset clock")
-    document.getElementById("time").innerHTML = "00:00"
-}
-
-setInterval(incrementClock, 1000)
+const counter = new CountDown();
+counter.updateScreen()
+setInterval(() => { counter.decrementClock() }, 1000);
