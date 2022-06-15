@@ -1,12 +1,41 @@
 body {
-    background-color: beige;
+    background-color: black;
+    font-family: 'Stalinist One', cursive;
+    color: #6FEE48;
 }
 
-.container {
-    background-color: antiquewhite;
+.container {}
+
+.task-name {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #6FEE48;
+    color: #6FEE48;
+}
+
+.task-name:focus {
+    background: none;
+    color: #6FEE48;
 }
 
 .clock {
-    background-color: aqua;
-    width: 100px;
+    width: 500px;
+    font-size: 4rem;
+    margin-top: 150px;
 }
+
+.progress-bar {
+    background-color: #6FEE48;
+}
+
+#progress-bar {
+    background: none;
+    border: 1px solid #6FEE48;
+}
+
+/*
+.col-2,
+.col-5 {
+    border: 1px solid #6FEE48;
+}
+*/
