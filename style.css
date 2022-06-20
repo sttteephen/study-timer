@@ -6,14 +6,14 @@ body {
 
 .container {}
 
-.task-name {
+.task-name-input {
     background: none;
     border: none;
     border-bottom: 1px solid #6FEE48;
     color: #6FEE48;
 }
 
-.task-name:focus {
+.task-name-input:focus {
     background: none;
     color: #6FEE48;
 }
