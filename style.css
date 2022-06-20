@@ -24,6 +24,17 @@ body {
     margin-top: 150px;
 }
 
+@media screen and (max-width: 500px) {
+    .clock {
+        width: 95%;
+        margin-top: 50px;
+    }
+
+    .time-colon {
+        display: none;
+    }
+}
+
 .progress-bar {
     background-color: #6FEE48;
 }
