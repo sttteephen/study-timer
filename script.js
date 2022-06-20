@@ -63,12 +63,12 @@ function CountDown() {
         nameInput = document.getElementById("task-name-input");
         inputDiv = document.getElementById("name-duration");
         nameDiv = document.getElementById("task-name-div");
-        nameH3 = document.getElementById("task-name-h3");
+        nameH2 = document.getElementById("task-name-h2");
 
         newName = nameInput.value;
 
         if (newName) {
-            nameH3.innerHTML = newName;
+            nameH2.innerHTML = newName;
             nameDiv.classList.replace("invisible", "visible");
         }
 
