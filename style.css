@@ -24,7 +24,7 @@ body {
     margin-top: 150px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 576px) {
     .clock {
         width: 95%;
         margin-top: 50px;
